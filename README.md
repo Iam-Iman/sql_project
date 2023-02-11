@@ -16,7 +16,8 @@ The air quality index in Beijing has increased over time. This may negatively im
 With the PM 2.5 pollutant as our primary emphasis, we will analyze and quantify the effect on the increase in the Air Quality Index. It has been discoverd that when levels of the air pollutant fine particulate matter (PM 2.5) are excessive, it poses a risk to people's health.
 PM 2.5 are extremely small, inhalable particles that typically have a diameter of 2.5 micrometers or less and come from a variety of sources.
 
-The data was cleaned and explored using SQL Server, and the resulting clean SQL file linked and displayed in Power BI to generate a dashboard of the findings.
+The data was cleaned and explored using SQL Server and the resulting clean SQL file linked and displayed in Power BI to generate a dashboard of the findings.
+The SQL script can be found [here](sql_project/tree/main/air_quality.sql)
 
 
 
