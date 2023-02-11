@@ -6,3 +6,7 @@ The aim of this analysis is to use SQL to determine the factors that have an inf
 For this study, we worked on on the Beijing PM 2.5 public dataset from https://archive.ics.uci.edu/ml/datasets/Beijing+PM2.5+Data#
 
 The data set contains hourly PM 2.5 data of US Embassy in Beijing from Jan 1st, 2010 to Dec 31st, 2014.
+
+## Problem Statement
+
+The air quality index in Beijing has increased over time. This may negatively impact not just the general populace but also the ecosystem as a whole and all species that live there.
