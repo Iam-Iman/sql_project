@@ -7,6 +7,14 @@ For this study, we worked on on the Beijing PM 2.5 public dataset from https://a
 
 The data set contains hourly PM 2.5 data of US Embassy in Beijing from Jan 1st, 2010 to Dec 31st, 2014.
 
-## Problem Statement
+## Problem Definition
 
 The air quality index in Beijing has increased over time. This may negatively impact not just the general populace but also the ecosystem as a whole and all species that live there.
+
+## Solution
+
+With the PM 2.5 pollutant as our primary emphasis, we will analyze and quantify the effect on the increase in the Air Quality Index. It has been discoverd that when levels of the air pollutant fine particulate matter (PM 2.5) are excessive, it poses a risk to people's health.
+PM 2.5 are extremely small, inhalable particles that typically have a diameter of 2.5 micrometers or less and come from a variety of sources.
+
+
+
