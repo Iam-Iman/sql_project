@@ -17,7 +17,7 @@ With the PM 2.5 pollutant as our primary emphasis, we will analyze and quantify 
 PM 2.5 are extremely small, inhalable particles that typically have a diameter of 2.5 micrometers or less and come from a variety of sources.
 
 The data was cleaned and explored using SQL Server and the resulting clean SQL file linked and displayed in Power BI to generate a dashboard of the findings.
-The SQL script can be found [here](sql_project/tree/main/air_quality.sql)
+The SQL script can be found [here](/air_quality.sql)
 
 
 
