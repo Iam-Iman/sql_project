@@ -70,3 +70,23 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 ![beijing_file](images/sql_3.png)
 
 > 2013 had the highest average PM 2.5 levels and 2012 had the lowest.
+
+3.1 Which wind direction had the most prevalent daily PM 2.5 levels in 2012?
+
+		WITH daily_pm AS(
+			SELECT
+			wind_direction,  
+			SUM(pm) AS daily_pm
+			FROM BeijingAir
+			WHERE year = 2012
+			GROUP BY wind_direction
+			)
+			SELECT wind_direction, 
+			MAX(daily_pm) max_daily_pm
+			FROM daily_pm
+			GROUP BY wind_direction
+			ORDER BY max_daily_pm DESC;
+			
+![beijing_file](images/sql_3.1.png)
+
+> For the year 2012, the common wind direction was SouthEast.
