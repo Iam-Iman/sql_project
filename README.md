@@ -117,3 +117,17 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 ![beijing_file](images/sql_4.1.png)
 
 > In the month of January 2011 the average PM 2.5 level were at its lowest at 40.55 as opposed to January of 2013 with levels as high as 191.97
+
+ 5.On average, does the wind speed have any effect on the PM 2.5 level, limit to 10? 
+ 
+		SELECT TOP 10 
+				ROUND(wind_speed, 2) AS wind_speed, 
+				AVG(pm) AS avg_pm
+		FROM BeijingAir
+		GROUP BY wind_speed 
+		ORDER BY avg_pm DESC;
+	
+![beijing_file](images/sql_5.png)
+  
+ > There is no correlation between average PM 2.5 and wind speed, because the values have no apparent trend with each other.
+  
