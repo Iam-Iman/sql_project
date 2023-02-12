@@ -169,3 +169,15 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 ![beijing_file](images/sql_7.1.png)
 
 > On average January, December and February have the coldest temperatures, with February having the largest average PM 2.5 levels.
+
+8. What are the maximum and minimum temperatures ?
+
+		SELECT 
+			MAX(temperature) AS max_temp,
+			MIN(temperature) AS min_temp
+		FROM BeijingAir;
+		
+![beijing_file](images/sql_8.png)
+
+> Maximum tempature is 42 degrees and the lowest is -19.
+
