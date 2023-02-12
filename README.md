@@ -1,4 +1,4 @@
-# Impact of Weather Conditions on Air Quality**
+# Impact of Weather Conditions on Air Quality
 
 ## Overview
 
