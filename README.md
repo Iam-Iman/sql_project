@@ -90,3 +90,30 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 ![beijing_file](images/sql_3.1.png)
 
 > For the year 2012, the common wind direction was SouthEast.
+
+4. What are the average PM 2.5 levels by year and month limit 5?
+
+		SELECT TOP 5
+				year,
+				month,
+				AVG(pm) AS average_pm_levels
+		 FROM BeijingAir
+		 GROUP BY month,year
+		 ORDER BY average_pm_levels DESC;
+		 
+![beijing_file](images/sql_4.png)
+
+
+4.1 Bottom 5
+
+		 SELECT TOP 5
+				year,
+				month,
+				AVG(pm) AS average_pm_levels
+		 FROM BeijingAir
+		 GROUP BY month,year
+		 ORDER BY average_pm_levels ASC;
+		 
+![beijing_file](images/sql_4.1.png)
+
+> In the month of January 2011 the average PM 2.5 level were at its lowest at 40.55 as opposed to January of 2013 with levels as high as 191.97
