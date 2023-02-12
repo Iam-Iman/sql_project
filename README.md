@@ -131,3 +131,15 @@ The first five records excluding the first 24, where PM 2.5 values = 0
   
  > There is no correlation between average PM 2.5 and wind speed, because the values have no apparent trend with each other.
   
+6. What is the most prevalent wind direction in Beijing ?
+
+		SELECT 
+			wind_direction,
+			COUNT(wind_direction) AS wind
+		FROM BeijingAir
+		GROUP BY wind_direction
+		ORDER BY wind DESC;
+		
+![beijing_file](images/sql_6.png)
+
+> The commonly occuring wind direction is SouthEast(SE), it comes as no suprise because Beijing is located 150 km SE of the Bohai sea.
