@@ -247,3 +247,12 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 
 > For a total of 2366 hours it rained in 2012.
 
+12. What are the maximum, minimum and average pm 2.5 levels ?
+
+		SELECT MAX(pm) as max_pm, MIN(pm) AS min_pm, AVG(pm) AS avg_pm
+		FROM BeijingAir
+		WHERE pm > 0;
+		
+![beijing_file](images/sql_12.png)
+
+> On average, the PM 2.5 levels were 'Unhealthy' as they fall within the 55-150 micrograms per cubic meter range.
