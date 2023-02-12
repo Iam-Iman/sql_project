@@ -20,4 +20,4 @@ The data was cleaned and explored using SQL Server and the resulting clean SQL f
 The SQL script can be found [here](/air_quality.sql)
 
 
-
+![beijing_file](BeijingSQL Answer Tables/sql_full.png)
