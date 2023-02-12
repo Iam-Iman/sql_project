@@ -19,6 +19,23 @@ PM 2.5 are extremely small, inhalable particles that typically have a diameter o
 The data was cleaned and explored using SQL Server and the resulting clean SQL file linked and displayed in Power BI to generate a dashboard of the findings.
 The SQL script can be found [here](/air_quality.sql)
 
+## The BeijingAir Table
+
+		**row_id**  	int  (primary key)
+		year		int	
+		month 		int
+		day		int
+		hour		int
+		pm 		float
+		dew_point	int
+		temperature	float
+		pressure	float
+		wind_direction	varchar(50)
+		wind_speed	float
+		snow_hours	int
+		rain_hours	int
+		date		date
+
 ## Answering Questions
 
 The first five records excluding the first 24, where PM 2.5 values = 0 
