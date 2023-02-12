@@ -181,3 +181,28 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 
 > Maximum tempature is 42 degrees and the lowest is -19.
 
+9. What are the 5 lowest daily average PM 2.5 levels, limited to 16?
+
+		SELECT TOP 16
+			day,
+			AVG(pm) AS avg_pm_levels
+		FROM BeijingAir
+		GROUP BY day
+		ORDER BY avg_pm_levels ASC;
+		
+![beijing_file](images/sql_9.png)
+
+> Day 14 had the lowest average PM2.5 levels, and then the PM2.5 levels decreased and increased daily in no set order.
+
+9.1 What are the 5 highest daily average PM 2.5 levels, limited to 16?
+
+		SELECT TOP 16
+			day,
+			AVG(pm) AS avg_pm_levels
+		FROM BeijingAir
+		GROUP BY day
+		ORDER BY avg_pm_levels DESC;
+		
+![beijing_file](images/sql_9.1.png)
+
+> Day 19 had the highest average PM 2.5 levels, then the levels decreased and increased gradually, in no particular order.
