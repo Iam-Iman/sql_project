@@ -25,7 +25,7 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 
 ![beijing_file](images/sql_full.png)
 
-##1. How are the average PM 2.5 levels distributed by wind direction ?
+1. How are the average PM 2.5 levels distributed by wind direction ?
 
 	SELECT wind_direction,
 		AVG(pm) AS avg_pm
@@ -36,3 +36,37 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 ![beijing_file](images/sql_1.png)
 
 > On average, weather conditions are calm 
+
+2. Air Quality Index Categories 
+
+	WITH CTE AS(
+			SELECT row_id, pm,
+			CASE
+				WHEN pm BETWEEN 0 AND 12 THEN 'Good'
+				WHEN pm BETWEEN 12 AND 35 THEN 'Moderate'
+				WHEN pm BETWEEN 35 AND 55 THEN 'Unhealthy for Sensitive Groups'
+				WHEN pm BETWEEN 55 AND 150  THEN 'Unhealthy'
+				WHEN pm BETWEEN 150 AND 250 THEN 'Very Unhealthy'
+				ELSE 'Hazardous'
+			END AS pm_levels
+			FROM BeijingAir
+			)
+	SELECT TOP 5 row_id, pm, pm_levels
+	FROM CTE
+	WHERE pm > 0;
+	
+![beijing_file](images/sql_2.png)
+
+> The selected rows show that the PM 2.5 levels vary.
+
+3. What is the average PM 2.5 levels by year ?
+ 
+	SELECT year, 
+	       AVG(pm) AS average_pm_levels
+	 FROM BeijingAir
+	 GROUP BY year 
+	 ORDER BY average_pm_levels DESC;
+	 
+![beijing_file](images/sql_3.png)
+
+> 2013 had the highest average PM 2.5 levels and 2012 had the lowest.
