@@ -217,5 +217,33 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 		
 ![beijing_file](images/sql_10.png)
 
-2012 had the lowest total PM2.5.
+> 2012 had the lowest total PM2.5.
+
+11. What are the total accumulated snow hours by year?
+
+		SELECT 
+			year,
+			SUM(snow_hours) AS total_snow
+		FROM BeijingAir
+		GROUP BY year
+		HAVING SUM(snow_hours) > 0
+		ORDER BY total_snow DESC;
+
+![beijing_file](images/sql_11.png)
+
+> In 2012 the total snow hours were high at 631.
+
+11.1 What are the total accumulated rain hours by year ?
+
+		SELECT 
+			year,
+			SUM(rain_hours) AS total_rain
+		FROM BeijingAir
+		GROUP BY year
+		HAVING SUM(rain_hours) > 0
+		ORDER BY total_rain DESC;
+		
+![beijing_file](images/sql_11.1.png)
+
+> For a total of 2366 hours it rained in 2012.
 
