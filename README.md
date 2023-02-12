@@ -26,10 +26,13 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 ![beijing_file](images/sql_full.png)
 
 ##1. How are the average PM 2.5 levels distributed by wind direction ?
+
 	SELECT wind_direction,
 		AVG(pm) AS avg_pm
 	FROM BeijingAir
 	GROUP BY wind_direction
 	ORDER BY avg_pm DESC;
+	
 ![beijing_file](images/sql_1.png)
+
 > On average, weather conditions are calm 
