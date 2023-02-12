@@ -206,3 +206,16 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 ![beijing_file](images/sql_9.1.png)
 
 > Day 19 had the highest average PM 2.5 levels, then the levels decreased and increased gradually, in no particular order.
+
+10. Which year had the least total PM 2.5 levels?
+		SELECT 
+			year,
+			SUM(pm) AS total_pm
+		FROM BeijingAir
+		GROUP BY year
+		ORDER BY total_pm ASC;
+		
+![beijing_file](images/sql_10.png)
+
+2012 had the lowest total PM2.5.
+
