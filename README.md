@@ -143,3 +143,29 @@ The first five records excluding the first 24, where PM 2.5 values = 0
 ![beijing_file](images/sql_6.png)
 
 > The commonly occuring wind direction is SouthEast(SE), it comes as no suprise because Beijing is located 150 km SE of the Bohai sea.
+
+7. What are the coldest months and what are their corresponding average PM 2.5 values, limit 5 ?
+
+		SELECT TOP 5
+				month,
+				AVG(temperature) AS avg_temp, 
+				AVG(pm) as avg_pm
+		FROM BeijingAir
+		GROUP BY month
+		ORDER BY avg_temp ASC;
+
+![beijing_file](images/sql_7.png)
+
+7.1 What are the hottest months and what are their corresponding average PM 2.5 values, limit 5 ?
+
+		SELECT TOP 5
+				month,
+				AVG(temperature) AS avg_temp, 
+				AVG(pm) as avg_pm
+		FROM BeijingAir
+		GROUP BY month
+		ORDER BY avg_temp DESC;
+
+![beijing_file](images/sql_7.1.png)
+
+> On average January, December and February have the coldest temperatures, with February having the largest average PM 2.5 levels.
