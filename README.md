@@ -21,7 +21,7 @@ The SQL script can be found [here](/air_quality.sql)
 
 ## The BeijingAir Table
 
-		**row_id**  	int  (primary key)
+		row_id  	int  (primary key)
 		year		int	
 		month 		int
 		day		int
